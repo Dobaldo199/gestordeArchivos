@@ -180,23 +180,39 @@ public class GestorArchivos
     }
     
     public void buscarRegistro(){
+    Scanner ingreso = new Scanner (System.in);
+    boolean elNumeroEsta = false;
+
+        int num[]=new int[2];
+        int x;
+        for(x=0;x<num.length;x++){
+            System.out.print("ingrese un numero: ");
+            num[x]=ingreso.nextInt();
+        }
+        for(x=0;x<num.length;x++){
+            System.out.println(num[x]);
+        }
+
+        System.out.print("buscar numero: ");
+        int numero;
+        numero=ingreso.nextInt();
+
+        for(x=0;x<num.length;x++){
+            if (numero == num[x]) {
+                System.out.println("El numero esta en el indice "+x+", en la posicion "+(x+1));
+                elNumeroEsta = true;
+            }
+        }
+
+        if(elNumeroEsta ==false) {
+            System.out.println("El numero no esta");
+        }
     }
     
     public void retomarDato(){
     }
     
     public void ordenarCampo(){
-        for(int i = 0;i< arreglo.leght -1; i++){
-            for(int j= 0;j < arreglo.leght - 1; j++){
-                if(arreglo [j] < arreglo[j+ 1]){
-                    int tmp = arreglo [j+1];
-                    arreglo [] = arreglo [];
-                    arreglo [j] = tmp;
-                }
-            }
-        }
-        for(int i=0; i< arreglo.leght; i++){
-            
-        }
+        
     }
 }
