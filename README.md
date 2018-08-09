@@ -212,7 +212,23 @@ public class GestorArchivos
     public void retomarDato(){
     }
     
-    public void ordenarCampo(){
+    public void ordenarCampo(){ \\este se ordena usando la metodologia de la burbuja
+       boolean bandera = true;
+       int superior = v.lenght;
+       while(bandera){
+          bandera = false;
+          superior--;
+          for(int = 0;i< superior; i++){
+             if(v[i].compareTo()v[i+1])>0){
+              T temp= v[i];
+              v[i]=v[i+1];
+              v[i+1]=temp;
+              bandera = true;
+             }
+          }
+       }
+    
         
     }
+    
 }
